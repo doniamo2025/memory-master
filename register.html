@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Master | Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Create <span>Account</span></h1>
+    <p class="subtitle">Create an account to start your magical memory journey.</p>
+
+    
+    <p id="message" class="message" role="alert"></p>
+
+    <form id="registerForm" novalidate>
+
+      
+      <div class="name-row">
+        <div class="field" id="firstNameField">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>
+          </svg>
+          <input id="firstName" type="text" placeholder="First Name" aria-label="First name" autocomplete="given-name">
+        </div>
+
+        <div class="field" id="lastNameField">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>
+          </svg>
+          <input id="lastName" type="text" placeholder="Last Name" aria-label="Last name" autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="field" id="emailField">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <polyline points="3,7 12,13 21,7"/>
+        </svg>
+        <input id="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+      </div>
+
+      <div class="field" id="passwordField">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="11" width="14" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+        <input id="password" type="password" placeholder="Password" aria-label="Password" autocomplete="new-password">
+        <button id="eyeBtn" type="button" class="eye-btn" aria-label="Show or hide password">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line class="slash" x1="3" y1="3" x2="21" y2="21"/>
+          </svg>
+        </button>
+      </div>
+      <div class="field" id="confirmField">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="11" width="14" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+        <input id="confirm" type="password" placeholder="Confirm Password" aria-label="Confirm password" autocomplete="new-password">
+      </div>
+
+      <button id="submitBtn" type="submit" class="btn btn-main btn-upper">
+        Register Now
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="4,12 10,18 20,6"/>
+        </svg>
+      </button>
+    </form>
+
+    <p class="bottom-text">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </main>
+
+  
+  <script src="js/storage.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

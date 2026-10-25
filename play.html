@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Master | Play</title>
+  <link rel="stylesheet" href="css/play.css">
+
+  
+  <script src="js/storage.js"></script>
+  <script>
+    if (!getCurrentUser()) window.location.replace("login.html");
+  </script>
+</head>
+<body>
+
+  <div id="fireflies" aria-hidden="true"></div>
+  <div id="banner" class="banner" aria-live="polite"></div>
+
+  <a href="home.html" class="home-btn" aria-label="Back to home">← Home</a>
+
+  <button id="pauseBtn" class="pause-btn" type="button" aria-label="Pause game">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+  </button>
+  <button id="muteBtn" class="mute-btn" type="button" aria-label="Mute sound">🔊</button>
+
+  <main class="game">
+    <header>
+      <h1 class="title">Memory <span>Match</span></h1>
+      <p class="subtitle">Flip and find matching pairs</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="stat"><span class="stat-label">Moves</span><span class="stat-value" id="moves">0</span></div>
+      <div class="stat"><span class="stat-label">Score</span><span class="stat-value" id="score">0</span></div>
+      <div class="stat"><span class="stat-label">Time</span><span class="stat-value" id="time">0s</span></div>
+    </section>
+
+    <section id="board" class="board" aria-label="Memory cards"></section>
+
+    <section class="controls">
+      <button id="peekBtn" class="menu-btn" type="button">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>
+        </svg>Peek
+      </button>
+      <button id="levelBtn" class="menu-btn" type="button">Change level</button>
+      <button id="restartBtn" class="restart-btn" type="button">↻ Restart</button>
+    </section>
+  </main>
+
+  
+  <div id="levelModal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="levelTitle">
+      <h2 id="levelTitle">Choose your level</h2>
+      <div class="level-list">
+        <button class="level-btn" data-level="easy" type="button"><b>Easy</b><span>4×4 · 90s</span></button>
+        <button class="level-btn" data-level="medium" type="button"><b>Medium</b><span>6×6 · 180s</span></button>
+        <button class="level-btn" data-level="hard" type="button"><b>Hard</b><span>6×6 · 120s</span></button>
+        <button class="level-btn" data-level="expert" type="button"><b>Expert</b><span>8×8 · 240s</span></button>
+      </div>
+      <a href="home.html" class="back-link">Back to home</a>
+    </div>
+  </div>
+
+  
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+      <div class="modal-buttons">
+        <button id="againBtn" class="restart-btn" type="button"></button>
+        <button id="menuBtn" class="menu-btn" type="button">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+  <script src="js/play.js"></script>
+</body>
+</html>

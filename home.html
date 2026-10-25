@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Master | Home</title>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <header class="header">
+
+    <a href="home.html" class="brand">
+      <img src="images/card2.png" alt="Memory Master logo" class="brand-logo">
+      <span>Memory Master</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="home.html" class="nav-link active" aria-current="page">Home</a>
+      <a href="play.html" class="nav-link">Play</a>
+    </nav>
+
+    <div class="user-area">
+      <button id="profileBtn" type="button" class="header-btn" aria-label="My results">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>
+        </svg>
+        <span id="playerName" class="player-name"></span>
+      </button>
+
+      <button id="logoutBtn" type="button" class="header-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="hero">
+
+    <p class="welcome">Welcome back, <span id="welcomeName"></span>!</p>
+
+    <h1>Train Your Brain, <span>One Card at a Time</span></h1>
+
+    <p class="hero-text">
+      Flip, match, and remember your way through a magical world of challenges.
+    </p>
+
+    <a href="play.html" class="start-btn">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="6,4 20,12 6,20"/>
+      </svg>
+      START GAME
+    </a>
+
+    <p class="hint">Ready to test your memory?</p>
+
+    <div class="cards">
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      <div class="card-slot"><img class="card-img" src="images/card2.png" alt="Memory card"></div>
+      
+    </div>
+  </main>
+
+  
+  <dialog id="resultsDialog" aria-labelledby="resultsTitle">
+    <div class="dialog-inner">
+      <h2 id="resultsTitle"></h2>
+      <div id="resultsBody"></div>
+      <button id="closeBtn" type="button" class="close-btn">Close</button>
+    </div>
+  </dialog>
+
+  <script src="js/storage.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

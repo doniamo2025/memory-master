@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Master | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Welcome <span>Back!</span></h1>
+    <p class="subtitle">Log in to your account and continue your memory journey.</p>
+
+    
+    <p id="message" class="message" role="alert"></p>
+
+    <form id="loginForm" novalidate>
+
+     
+      <div class="field" id="emailField">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <polyline points="3,7 12,13 21,7"/>
+        </svg>
+        <input id="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+      </div>
+
+     
+      <div class="field" id="passwordField">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="11" width="14" height="10" rx="2"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+        <input id="password" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password">
+        <button id="eyeBtn" type="button" class="eye-btn" aria-label="Show or hide password">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line class="slash" x1="3" y1="3" x2="21" y2="21"/>
+          </svg>
+        </button>
+      </div>
+
+      <button type="submit" class="btn btn-main">
+        Log In
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12,5 19,12 12,19"/>
+        </svg>
+      </button>
+    </form>
+
+    <p class="divider">OR</p>
+
+    <a href="register.html" class="btn btn-outline">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <line x1="19" y1="8" x2="19" y2="14"/>
+        <line x1="16" y1="11" x2="22" y2="11"/>
+      </svg>
+      Create New Account
+    </a>
+  </main>
+
+  
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
